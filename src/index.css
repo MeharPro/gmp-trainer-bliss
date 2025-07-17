@@ -8,65 +8,65 @@ All colors MUST be HSL for proper theming.
 
 @layer base {
   :root {
-    /* Dark theme AI interface colors */
-    --background: 222 15% 6%;
-    --foreground: 210 40% 98%;
+    /* Light theme AI interface colors */
+    --background: 0 0% 99%;
+    --foreground: 222 15% 15%;
 
-    --card: 222 15% 8%;
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 15% 15%;
 
-    --popover: 222 15% 8%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 15% 15%;
 
-    /* Primary - Deep AI Purple */
-    --primary: 245 75% 65%;
-    --primary-foreground: 210 40% 98%;
-    --primary-glow: 245 90% 75%;
+    /* Primary - Vibrant AI Purple */
+    --primary: 245 75% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 245 90% 70%;
 
-    /* Secondary - Elegant Dark */
-    --secondary: 222 15% 12%;
-    --secondary-foreground: 210 40% 85%;
+    /* Secondary - Elegant Light */
+    --secondary: 210 30% 96%;
+    --secondary-foreground: 222 15% 20%;
 
     /* Muted - Subtle Grays */
-    --muted: 222 15% 10%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 210 30% 95%;
+    --muted-foreground: 215 20% 40%;
 
     /* Accent - Bright Cyan */
-    --accent: 189 100% 65%;
-    --accent-foreground: 222 15% 6%;
+    --accent: 189 100% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 222 15% 15%;
-    --input: 222 15% 12%;
-    --ring: 245 75% 65%;
+    --border: 214 31% 91%;
+    --input: 0 0% 100%;
+    --ring: 245 75% 60%;
 
     --radius: 0.75rem;
 
     /* AI Chat specific colors */
-    --chat-user: 245 75% 65%;
-    --chat-assistant: 222 15% 12%;
-    --chat-hover: 222 15% 14%;
+    --chat-user: 245 75% 60%;
+    --chat-assistant: 0 0% 100%;
+    --chat-hover: 210 30% 98%;
     
-    /* Premium gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(245 75% 65%), hsl(189 100% 65%));
-    --gradient-background: linear-gradient(135deg, hsl(222 15% 6%), hsl(222 25% 8%));
-    --gradient-card: linear-gradient(135deg, hsl(222 15% 8% / 0.8), hsl(222 15% 12% / 0.6));
-    --gradient-glow: linear-gradient(135deg, hsl(245 90% 75% / 0.2), hsl(189 100% 75% / 0.2));
+    /* Premium gradients for light mode */
+    --gradient-primary: linear-gradient(135deg, hsl(245 75% 60%), hsl(189 100% 55%));
+    --gradient-background: linear-gradient(135deg, hsl(0 0% 99%), hsl(210 30% 98%));
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100% / 0.9), hsl(210 30% 98% / 0.8));
+    --gradient-glow: linear-gradient(135deg, hsl(245 90% 70% / 0.1), hsl(189 100% 65% / 0.1));
     
-    /* Glassmorphism */
-    --glass-bg: hsl(222 15% 12% / 0.7);
-    --glass-border: hsl(245 75% 65% / 0.2);
+    /* Glassmorphism for light mode */
+    --glass-bg: hsl(0 0% 100% / 0.8);
+    --glass-border: hsl(245 75% 60% / 0.15);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     
-    /* Shadows */
-    --shadow-glow: 0 0 40px hsl(245 75% 65% / 0.3);
-    --shadow-card: 0 10px 30px -10px hsl(222 15% 0% / 0.3);
-    --shadow-float: 0 20px 60px -20px hsl(245 75% 65% / 0.2);
+    /* Shadows for light mode */
+    --shadow-glow: 0 0 40px hsl(245 75% 60% / 0.15);
+    --shadow-card: 0 10px 30px -10px hsl(222 15% 0% / 0.1);
+    --shadow-float: 0 20px 60px -20px hsl(245 75% 60% / 0.1);
 
     --sidebar-background: 0 0% 98%;
 
