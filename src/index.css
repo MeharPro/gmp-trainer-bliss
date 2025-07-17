@@ -2,41 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* GMP Trainer Design System - Premium AI Chat Interface
+All colors MUST be HSL for proper theming.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Dark theme AI interface colors */
+    --background: 222 15% 6%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 222 15% 8%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 222 15% 8%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
+    /* Primary - Deep AI Purple */
+    --primary: 245 75% 65%;
     --primary-foreground: 210 40% 98%;
+    --primary-glow: 245 90% 75%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Elegant Dark */
+    --secondary: 222 15% 12%;
+    --secondary-foreground: 210 40% 85%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted - Subtle Grays */
+    --muted: 222 15% 10%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Bright Cyan */
+    --accent: 189 100% 65%;
+    --accent-foreground: 222 15% 6%;
 
-    --destructive: 0 84.2% 60.2%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 222 15% 15%;
+    --input: 222 15% 12%;
+    --ring: 245 75% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
+
+    /* AI Chat specific colors */
+    --chat-user: 245 75% 65%;
+    --chat-assistant: 222 15% 12%;
+    --chat-hover: 222 15% 14%;
+    
+    /* Premium gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(245 75% 65%), hsl(189 100% 65%));
+    --gradient-background: linear-gradient(135deg, hsl(222 15% 6%), hsl(222 25% 8%));
+    --gradient-card: linear-gradient(135deg, hsl(222 15% 8% / 0.8), hsl(222 15% 12% / 0.6));
+    --gradient-glow: linear-gradient(135deg, hsl(245 90% 75% / 0.2), hsl(189 100% 75% / 0.2));
+    
+    /* Glassmorphism */
+    --glass-bg: hsl(222 15% 12% / 0.7);
+    --glass-border: hsl(245 75% 65% / 0.2);
+    
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(245 75% 65% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(222 15% 0% / 0.3);
+    --shadow-float: 0 20px 60px -20px hsl(245 75% 65% / 0.2);
 
     --sidebar-background: 0 0% 98%;
 
@@ -101,5 +131,53 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    background: var(--gradient-background);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  /* Chat message animations */
+  .message-enter {
+    @apply animate-[messageSlideIn_0.4s_ease-out];
+  }
+  
+  .typing-dots {
+    @apply animate-[typingDots_1.4s_infinite];
+  }
+  
+  /* Glassmorphism utilities */
+  .glass {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  
+  /* Gradient text */
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Floating animation */
+  .float {
+    @apply animate-[float_3s_ease-in-out_infinite];
+  }
+  
+  /* Glow effects */
+  .glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-hover {
+    transition: var(--transition-smooth);
+  }
+  
+  .glow-hover:hover {
+    box-shadow: var(--shadow-glow);
+    transform: translateY(-2px);
   }
 }
